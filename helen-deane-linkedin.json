@@ -1,0 +1,634 @@
+﻿{
+    "id":  "ACoAAAH61JcBj1F8ciB1J2h1BkcEq2GihsnXbW4",
+    "publicIdentifier":  "helendeane",
+    "linkedinUrl":  "https://www.linkedin.com/in/helendeane",
+    "firstName":  "Dr Helen A",
+    "lastName":  "Deane",
+    "emails":  [
+
+               ],
+    "headline":  "Leadership \u0026 Management Consultant | Executive Coach | Founder of ILM \u0026 City \u0026 Guilds Accredited Training Centre | Specialist in Reflective, Inclusive \u0026 Human-Centred Leadership development.",
+    "premium":  false,
+    "influencer":  false,
+    "location":  {
+                     "linkedinText":  "London, England, United Kingdom",
+                     "countryCode":  "GB",
+                     "parsed":  {
+                                    "text":  "London, United Kingdom",
+                                    "countryCode":  "GB",
+                                    "regionCode":  null,
+                                    "country":  "UK",
+                                    "countryFull":  "United Kingdom",
+                                    "state":  "England",
+                                    "city":  "London"
+                                }
+                 },
+    "objectUrn":  "33215639",
+    "registeredAt":  null,
+    "topSkills":  null,
+    "connectionsCount":  351,
+    "followerCount":  368,
+    "about":  "Strong leadership today requires more than technical competence. It requires reflective judgement, psychological awareness, ethical decision-making, and the ability to lead people through complexity with confidence and integrity.\nI work with organisations and leaders to develop inclusive, human-centred leadership cultures that strengthen people, practice, and organisational effectiveness.\nI bring together deep academic expertise and practical leadership experience, holding a Doctorate in Education, a Master’s in Educational Leadership, CIPD certification, and a Postgraduate Diploma in Coaching. My professional background includes curriculum and qualification design, organisational change, executive and leadership coaching, and talent development. A published researcher and writer, I embed inclusive  practices and principles into everything I do and I am known for my engaging, thoughtful, and impactful delivery.  I am a trusted trainer, facilitator, and advisor who equips organisations to lead inclusively, develop people effectively, and achieve lasting, values-driven change.",
+    "currentPosition":  [
+                            {
+                                "companyId":  null,
+                                "companyLinkedinUrl":  null,
+                                "companyName":  "HDC Training \u0026 Consultants and HDC Training Centre"
+                            }
+                        ],
+    "profileTopEducation":  [
+                                {
+                                    "schoolId":  null,
+                                    "companyId":  null,
+                                    "schoolLinkedinUrl":  null,
+                                    "schoolName":  "Institute of Education (University of London)"
+                                }
+                            ],
+    "profileActions":  [
+
+                       ],
+    "profilePicture":  {
+                           "url":  "",
+                           "sizes":  [
+
+                                     ]
+                       },
+    "coverPicture":  {
+                         "url":  null,
+                         "sizes":  [
+
+                                   ]
+                     },
+    "photo":  "",
+    "profileLocales":  [
+                           {
+                               "country":  "US",
+                               "language":  "en"
+                           }
+                       ],
+    "primaryLocale":  {
+                          "country":  "US",
+                          "language":  "en"
+                      },
+    "services":  null,
+    "experience":  [
+                       {
+                           "position":  "Leadership, Management, EDI \u0026 AI Consultant and Trainer. Founder and Director. Interim Manager.",
+                           "location":  "London, United Kingdom",
+                           "employmentType":  "Contract",
+                           "workplaceType":  null,
+                           "companyName":  "HDC Training \u0026 Consultants and HDC Training Centre",
+                           "companyLinkedinUrl":  null,
+                           "companyId":  null,
+                           "companyUniversalName":  null,
+                           "duration":  null,
+                           "description":  "HDC Training \u0026 Consultants.\nTrainer, Leadership, Management, Equality, Diversity \u0026 Inclusion, Consultant. Interim Manager.  Executive Coach.\n\n•   Development and delivery of accredited, non accredited and bespoke training and development programmes  (Leadership and Management;  Equality, Diversity \u0026 Inclusion; Teaching \u0026 Learning;\nPersonal Development), E-Learning, toolkits, online and virtual training courses.\n•  Writing, research and evaluations.\n•  Project Management.\n•  Executive and Life Coaching\n•  Interim Leader and Manager\n• Artificial Intelligence Consultant in Leadership, Managment and Education",
+                           "skills":  [
+
+                                      ],
+                           "startDate":  {
+                                             "month":  "Sep",
+                                             "year":  2006,
+                                             "text":  "Sep 2006"
+                                         },
+                           "endDate":  {
+                                           "text":  "Present"
+                                       },
+                           "companyLogo":  {
+                                               "url":  "",
+                                               "sizes":  [
+
+                                                         ]
+                                           }
+                       },
+                       {
+                           "position":  "Associate Lecturer",
+                           "location":  null,
+                           "employmentType":  "Indirect Contract",
+                           "workplaceType":  null,
+                           "companyName":  "The Open University",
+                           "companyLinkedinUrl":  "https://www.linkedin.com/school/theopenuniversity/",
+                           "companyId":  "6128",
+                           "companyUniversalName":  "theopenuniversity",
+                           "duration":  null,
+                           "description":  null,
+                           "skills":  [
+
+                                      ],
+                           "startDate":  {
+                                             "month":  "Sep",
+                                             "year":  2021,
+                                             "text":  "Sep 2021"
+                                         },
+                           "endDate":  {
+                                           "month":  "Oct",
+                                           "year":  2022,
+                                           "text":  "Oct 2022"
+                                       },
+                           "companyLogo":  {
+                                               "url":  "https://media.licdn.com/dms/image/v2/C4E0BAQFJhiQCelJaSA/company-logo_400_400/company-logo_400_400/0/1655713019750/theopenuniversity_logo?e=1781740800\u0026v=beta\u0026t=LTsyYOoaC1ppOqHwk8HCY4LU_MI4NvbrD1goDCtpIbc",
+                                               "sizes":  [
+
+                                                         ]
+                                           }
+                       },
+                       {
+                           "position":  "Associate Lecturer",
+                           "location":  "London, United Kingdom",
+                           "employmentType":  null,
+                           "workplaceType":  null,
+                           "companyName":  "Birkbeck, University of London",
+                           "companyLinkedinUrl":  "https://www.linkedin.com/school/birkbeck-university-of-london/",
+                           "companyId":  "29719",
+                           "companyUniversalName":  "birkbeck-university-of-london",
+                           "duration":  null,
+                           "description":  "Strategic Leadership \u0026 Management, Organisational Development.",
+                           "skills":  [
+
+                                      ],
+                           "startDate":  {
+                                             "month":  "Apr",
+                                             "year":  2016,
+                                             "text":  "Apr 2016"
+                                         },
+                           "endDate":  {
+                                           "month":  "Oct",
+                                           "year":  2022,
+                                           "text":  "Oct 2022"
+                                       },
+                           "companyLogo":  {
+                                               "url":  "https://media.licdn.com/dms/image/v2/C560BAQGaJOJAlGOfLg/company-logo_400_400/company-logo_400_400/0/1630568172190/birkbeck_university_of_london_logo?e=1781740800\u0026v=beta\u0026t=kU_ZLm5oq4294-Tr5faujovZ3knjjAuvxWmRSs63LzU",
+                                               "sizes":  [
+
+                                                         ]
+                                           }
+                       },
+                       {
+                           "position":  "Interim Equality, Diversity \u0026 Inclusion Lead",
+                           "location":  null,
+                           "employmentType":  null,
+                           "workplaceType":  null,
+                           "companyName":  "Canterbury Christ Church University",
+                           "companyLinkedinUrl":  "https://www.linkedin.com/school/canterbury-christ-church-university/",
+                           "companyId":  "25262",
+                           "companyUniversalName":  "canterbury-christ-church-university",
+                           "duration":  null,
+                           "description":  "Ensuring effective equality, diversity and inclusion strategies are embedded and actively implemented across the University.  Acting as a source of expertise about EDI issues and providing guidance as well as identifying opportunities for organisational EDI improvements, with a key objective to assess the Universities readiness to apply for the Race Equality Charter.",
+                           "skills":  [
+
+                                      ],
+                           "startDate":  {
+                                             "month":  "Oct",
+                                             "year":  2020,
+                                             "text":  "Oct 2020"
+                                         },
+                           "endDate":  {
+                                           "month":  "Sep",
+                                           "year":  2021,
+                                           "text":  "Sep 2021"
+                                       },
+                           "companyLogo":  {
+                                               "url":  "https://media.licdn.com/dms/image/v2/D4E0BAQFVdFHcEk7zGA/company-logo_400_400/company-logo_400_400/0/1709299626693/canterbury_christ_church_university_logo?e=1781740800\u0026v=beta\u0026t=oDFgazAK8eZHvRFuqP81vDIgCe0TAdnXxqQMOGRUKu4",
+                                               "sizes":  [
+
+                                                         ]
+                                           }
+                       },
+                       {
+                           "position":  "Associate Lecturer",
+                           "location":  null,
+                           "employmentType":  "Part-time",
+                           "workplaceType":  null,
+                           "companyName":  "Morley College",
+                           "companyLinkedinUrl":  null,
+                           "companyId":  null,
+                           "companyUniversalName":  null,
+                           "duration":  null,
+                           "description":  "Teacher Training, Leadership, Management, Business Enterprise",
+                           "skills":  [
+
+                                      ],
+                           "startDate":  {
+                                             "month":  "May",
+                                             "year":  2017,
+                                             "text":  "May 2017"
+                                         },
+                           "endDate":  {
+                                           "month":  "Jul",
+                                           "year":  2018,
+                                           "text":  "Jul 2018"
+                                       },
+                           "companyLogo":  {
+                                               "url":  "",
+                                               "sizes":  [
+
+                                                         ]
+                                           }
+                       },
+                       {
+                           "position":  "Associate Lecturer",
+                           "location":  "Docklands Campus, London",
+                           "employmentType":  "Part-time",
+                           "workplaceType":  null,
+                           "companyName":  "University of South Wales",
+                           "companyLinkedinUrl":  null,
+                           "companyId":  null,
+                           "companyUniversalName":  null,
+                           "duration":  null,
+                           "description":  null,
+                           "skills":  [
+
+                                      ],
+                           "startDate":  {
+                                             "month":  "Sep",
+                                             "year":  2014,
+                                             "text":  "Sep 2014"
+                                         },
+                           "endDate":  {
+                                           "month":  "May",
+                                           "year":  2015,
+                                           "text":  "May 2015"
+                                       },
+                           "companyLogo":  {
+                                               "url":  "",
+                                               "sizes":  [
+
+                                                         ]
+                                           }
+                       },
+                       {
+                           "position":  "Associate Consultant",
+                           "location":  null,
+                           "employmentType":  "Contract",
+                           "workplaceType":  null,
+                           "companyName":  "LSIS",
+                           "companyLinkedinUrl":  null,
+                           "companyId":  null,
+                           "companyUniversalName":  null,
+                           "duration":  null,
+                           "description":  null,
+                           "skills":  [
+
+                                      ],
+                           "startDate":  {
+                                             "month":  null,
+                                             "year":  2007,
+                                             "text":  "2007"
+                                         },
+                           "endDate":  {
+                                           "month":  "Mar",
+                                           "year":  2012,
+                                           "text":  "Mar 2012"
+                                       },
+                           "companyLogo":  {
+                                               "url":  "",
+                                               "sizes":  [
+
+                                                         ]
+                                           }
+                       },
+                       {
+                           "position":  "Additional Inspector of Teacher Training provision",
+                           "location":  null,
+                           "employmentType":  "Freelance",
+                           "workplaceType":  null,
+                           "companyName":  "Ofsted",
+                           "companyLinkedinUrl":  "https://www.linkedin.com/company/ofsted/",
+                           "companyId":  "18826",
+                           "companyUniversalName":  "ofsted",
+                           "duration":  null,
+                           "description":  null,
+                           "skills":  [
+
+                                      ],
+                           "startDate":  {
+                                             "month":  "Nov",
+                                             "year":  2006,
+                                             "text":  "Nov 2006"
+                                         },
+                           "endDate":  {
+                                           "month":  "Nov",
+                                           "year":  2010,
+                                           "text":  "Nov 2010"
+                                       },
+                           "companyLogo":  {
+                                               "url":  "https://media.licdn.com/dms/image/v2/D4D0BAQFiiNxEM5SFnA/company-logo_400_400/company-logo_400_400/0/1663661770294/ofsted_logo?e=1781740800\u0026v=beta\u0026t=J62ZnNTDxZD_v92XKPMtOG1KCfrxEpPJ--JMur2YQ3I",
+                                               "sizes":  [
+
+                                                         ]
+                                           }
+                       },
+                       {
+                           "position":  "Research Associate",
+                           "location":  null,
+                           "employmentType":  "Contract",
+                           "workplaceType":  null,
+                           "companyName":  "Former Learning \u0026 Skills Network",
+                           "companyLinkedinUrl":  null,
+                           "companyId":  null,
+                           "companyUniversalName":  null,
+                           "duration":  null,
+                           "description":  null,
+                           "skills":  [
+
+                                      ],
+                           "startDate":  {
+                                             "month":  "Nov",
+                                             "year":  2006,
+                                             "text":  "Nov 2006"
+                                         },
+                           "endDate":  {
+                                           "month":  "Nov",
+                                           "year":  2010,
+                                           "text":  "Nov 2010"
+                                       },
+                           "companyLogo":  {
+                                               "url":  "",
+                                               "sizes":  [
+
+                                                         ]
+                                           }
+                       },
+                       {
+                           "position":  "Head of School",
+                           "location":  null,
+                           "employmentType":  "Full-time",
+                           "workplaceType":  null,
+                           "companyName":  "Lambeth College",
+                           "companyLinkedinUrl":  "https://www.linkedin.com/school/south-bank-colleges/",
+                           "companyId":  "742941",
+                           "companyUniversalName":  "south-bank-colleges",
+                           "duration":  null,
+                           "description":  null,
+                           "skills":  [
+
+                                      ],
+                           "startDate":  {
+                                             "month":  "Nov",
+                                             "year":  2000,
+                                             "text":  "Nov 2000"
+                                         },
+                           "endDate":  {
+                                           "month":  "Nov",
+                                           "year":  2006,
+                                           "text":  "Nov 2006"
+                                       },
+                           "companyLogo":  {
+                                               "url":  "https://media.licdn.com/dms/image/v2/C560BAQEHNwJNkkdQcA/company-logo_400_400/company-logo_400_400/0/1642497085471/lambeth_college_logo?e=1781740800\u0026v=beta\u0026t=-Wtd5n-sm-F-O-Ufo-UDKNTUefhBiOQfWR0vMwYIMoQ",
+                                               "sizes":  [
+
+                                                         ]
+                                           }
+                       }
+                   ],
+    "education":  [
+                      {
+                          "schoolName":  "Institute of Education (University of London)",
+                          "schoolLinkedinUrl":  "",
+                          "schoolId":  "",
+                          "degree":  "Doctor of Education (EdD)",
+                          "fieldOfStudy":  "Education Leadership",
+                          "skills":  [
+
+                                     ],
+                          "description":  "",
+                          "insights":  null,
+                          "startDate":  {
+                                            "month":  null,
+                                            "year":  2006,
+                                            "text":  "2006"
+                                        },
+                          "endDate":  {
+                                          "month":  null,
+                                          "year":  2011,
+                                          "text":  "2011"
+                                      },
+                          "period":  "2006 - 2011",
+                          "schoolLogo":  {
+                                             "url":  null,
+                                             "sizes":  [
+
+                                                       ]
+                                         }
+                      }
+                  ],
+    "certifications":  [
+
+                       ],
+    "projects":  [
+
+                 ],
+    "volunteering":  [
+
+                     ],
+    "receivedRecommendations":  [
+                                    {
+                                        "givenBy":  "Khalid Joomaye",
+                                        "givenByHeadline":  "Executive Coach | Leadership Development | HR \u0026 OD Consultant",
+                                        "givenAt":  "November 13, 2014, Khalid was Dr Helen A’s client",
+                                        "givenByLink":  "https://www.linkedin.com/in/khalidjoomaye",
+                                        "description":  "Helen has delivered a number of sessions over the past few years for various teams on our staff learning days.  She has always received positive feedback and helps participants to reflect on their current practices and to explore and try new ways of working.  I have no hesitation in recommending Helen for staff training.",
+                                        "givenByPicture":  {
+                                                               "url":  "https://media.licdn.com/dms/image/v2/D4E03AQE5XB7fsutwxQ/profile-displayphoto-crop_800_800/B4EZ27Os_YH0AI-/0/1776962690603?e=1781740800\u0026v=beta\u0026t=Ew0reAYFwfbCyGxJUEJJ4qQ3BqSwx1WVB2FDmWNTfWQ",
+                                                               "sizes":  [
+                                                                             {
+                                                                                 "url":  "https://media.licdn.com/dms/image/v2/D4E03AQE5XB7fsutwxQ/profile-displayphoto-crop_800_800/B4EZ27Os_YH0AI-/0/1776962690603?e=1781740800\u0026v=beta\u0026t=Ew0reAYFwfbCyGxJUEJJ4qQ3BqSwx1WVB2FDmWNTfWQ",
+                                                                                 "width":  800,
+                                                                                 "height":  800
+                                                                             },
+                                                                             {
+                                                                                 "url":  "https://media.licdn.com/dms/image/v2/D4E03AQE5XB7fsutwxQ/profile-displayphoto-scale_400_400/B4EZ27Os_YH0Ag-/0/1776962690870?e=1781740800\u0026v=beta\u0026t=QEAih2uBuUscc3eiFwab_qNofOUNEant0zqgI83aGLA",
+                                                                                 "width":  400,
+                                                                                 "height":  400
+                                                                             },
+                                                                             {
+                                                                                 "url":  "https://media.licdn.com/dms/image/v2/D4E03AQE5XB7fsutwxQ/profile-displayphoto-scale_200_200/B4EZ27Os_YH0AY-/0/1776962690870?e=1781740800\u0026v=beta\u0026t=iw5w80G77UYMmYppib6WoibbGgCVM0bJDosIGZJlO9k",
+                                                                                 "width":  200,
+                                                                                 "height":  200
+                                                                             },
+                                                                             {
+                                                                                 "url":  "https://media.licdn.com/dms/image/v2/D4E03AQE5XB7fsutwxQ/profile-displayphoto-scale_100_100/B4EZ27Os_YH0Ac-/0/1776962690871?e=1781740800\u0026v=beta\u0026t=NFS-Vygq3Qg29ShmsEoOoAvwAWp1no6HoDJHZY0Gm5A",
+                                                                                 "width":  100,
+                                                                                 "height":  100
+                                                                             }
+                                                                         ]
+                                                           }
+                                    },
+                                    {
+                                        "givenBy":  "Sue Ingram",
+                                        "givenByHeadline":  "Leadership Development Expert  |  Helping Leaders Build Accountable Teams",
+                                        "givenAt":  "March 23, 2010, Sue worked with Dr Helen A but on different teams",
+                                        "givenByLink":  "https://www.linkedin.com/in/sueingramleadership",
+                                        "description":  "Helen is a gifted, inspirational, professional and informed facilitator and program designer.  I had the privilege of working with Helen on a program she developed for LSIS as part of their positive action provision for BME staff within the Learning and Skills Sector.  Her attention to detail is terrific, her ability to create cohesion and discussion within a group, whilst promoting honest self-discovery and action is tremendous.  She is truly committed to maximising the learning of participants and is both thoughtful and creative in achieving this.  I have no hesitation in fully recommending Helen as a program designer and facilitator.",
+                                        "givenByPicture":  {
+                                                               "url":  "https://media.licdn.com/dms/image/v2/D4E03AQGBSAeMxXpC0g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1666542093876?e=1781740800\u0026v=beta\u0026t=Cs67sL6-__8I7YrtAE_XjSyLK_gcrysQa9higHBlMsg",
+                                                               "sizes":  [
+                                                                             {
+                                                                                 "url":  "https://media.licdn.com/dms/image/v2/D4E03AQGBSAeMxXpC0g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1666542093876?e=1781740800\u0026v=beta\u0026t=Cs67sL6-__8I7YrtAE_XjSyLK_gcrysQa9higHBlMsg",
+                                                                                 "width":  384,
+                                                                                 "height":  384
+                                                                             },
+                                                                             {
+                                                                                 "url":  "https://media.licdn.com/dms/image/v2/D4E03AQGBSAeMxXpC0g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1666542093876?e=1781740800\u0026v=beta\u0026t=pvJdP4y26L4KjYAJxdMLhaFWnIxUNQrVO72u8ZWbzOg",
+                                                                                 "width":  384,
+                                                                                 "height":  384
+                                                                             },
+                                                                             {
+                                                                                 "url":  "https://media.licdn.com/dms/image/v2/D4E03AQGBSAeMxXpC0g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1666542093876?e=1781740800\u0026v=beta\u0026t=uopUaBIpSKgCfq66GkLayfv3FkwAtVuC-dcMaUQEB88",
+                                                                                 "width":  200,
+                                                                                 "height":  200
+                                                                             },
+                                                                             {
+                                                                                 "url":  "https://media.licdn.com/dms/image/v2/D4E03AQGBSAeMxXpC0g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1666542093876?e=1781740800\u0026v=beta\u0026t=BmgiIf3JfAdvkYs7NiNUJPKgT-UPDvGwbf8CazbAb9o",
+                                                                                 "width":  100,
+                                                                                 "height":  100
+                                                                             }
+                                                                         ]
+                                                           }
+                                    }
+                                ],
+    "skills":  [
+                   {
+                       "name":  "Artifical Intelligence",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Artificial Intelligence (AI)",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Charity",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Training Management",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Strategic Thinking",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Presentations",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Management of Direct Reports",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Communication",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Coaching \u0026 Mentoring",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Attention to Detail",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Management Consulting",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Educational Leadership",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Diversity Training",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Human Resources (HR)",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Curriculum Development",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "E-Learning",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Strategy",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Curriculum Design",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Higher Education",
+                       "positions":  [
+
+                                     ]
+                   },
+                   {
+                       "name":  "Adult Education",
+                       "positions":  [
+
+                                     ]
+                   }
+               ],
+    "publications":  [
+
+                     ],
+    "courses":  [
+
+                ],
+    "honorsAndAwards":  [
+
+                        ],
+    "languages":  [
+
+                  ],
+    "causes":  [
+
+               ],
+    "featured":  null,
+    "moreProfiles":  [
+
+                     ],
+    "originalQuery":  {
+                          "query":  "https://www.linkedin.com/in/helendeane"
+                      }
+}

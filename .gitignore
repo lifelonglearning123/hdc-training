@@ -1,0 +1,21 @@
+# Local environment variables — never commit
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel
+
+# Node (if a build step is added later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp

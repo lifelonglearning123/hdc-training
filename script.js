@@ -6,15 +6,19 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Mark sections for scroll-reveal (skipped under reduced-motion — CSS already neutralises)
-const revealTargets = document.querySelectorAll(
-  '.pillar, .feature-card, .rail__item, .voice, .case, .biblio__item, .clients__col, .hero__meta-item, .track__stage, .proc-fact'
-);
+// Scroll-reveal — deliberately restrained. The $10K test: this should
+// feel like content settling into place, not AOS-fade-up sprayed
+// everywhere. Only section heads (where the §-chip lives) and hero meta
+// get the treatment — every list-item card animating in is slop.
+const revealTargets = document.querySelectorAll('.section-head, .hero__meta-item');
 
 if (!prefersReducedMotion) {
   revealTargets.forEach((el, i) => {
     el.classList.add('in-view');
-    el.style.transitionDelay = `${(i % 6) * 45}ms`;
+    // Stagger only the hero meta trio; section heads animate as one.
+    if (el.classList.contains('hero__meta-item')) {
+      el.style.transitionDelay = `${i * 80}ms`;
+    }
   });
 
   const io = new IntersectionObserver(
@@ -26,7 +30,7 @@ if (!prefersReducedMotion) {
         }
       });
     },
-    { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
+    { rootMargin: '0px 0px -12% 0px', threshold: 0.12 }
   );
   revealTargets.forEach((el) => io.observe(el));
 }
@@ -131,14 +135,33 @@ if (navToggle && mobileNav) {
   });
 }
 
-// Header shadow on scroll (toggle via class — avoid layout thrash)
+// Header shadow on scroll + scroll-progress hairline.
+// Both update on the same scroll tick to avoid duplicate work.
 const masthead = document.querySelector('.masthead');
-if (masthead) {
+const progressBar = document.querySelector('.scroll-progress__bar');
+if (masthead || progressBar) {
+  const docEl = document.documentElement;
+  let ticking = false;
+  const update = () => {
+    if (masthead) {
+      masthead.classList.toggle('is-scrolled', window.scrollY > 8);
+    }
+    if (progressBar) {
+      const total = docEl.scrollHeight - docEl.clientHeight;
+      const pct = total > 0 ? Math.min(1, Math.max(0, window.scrollY / total)) : 0;
+      progressBar.style.setProperty('--scroll-progress', pct.toFixed(4));
+    }
+    ticking = false;
+  };
   const onScroll = () => {
-    masthead.classList.toggle('is-scrolled', window.scrollY > 8);
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
 }
 
 // Smooth anchor scrolling is handled by CSS (scroll-behavior + scroll-margin-top).

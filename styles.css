@@ -12,7 +12,9 @@
   --text-2: #1E293B;
   --text-muted: #475569;
   --text-subtle: #64748B;
-  --text-faint: #94A3B8;
+  /* Was #94A3B8 — only 2.85:1 on white, fails WCAG AA.
+     #64748B gives 5.05:1 — passes AA for normal text. */
+  --text-faint: #64748B;
   --text-invert: #F8FAFC;
   --text-invert-muted: #CBD5E1;
 
@@ -163,9 +165,9 @@ section[id], main[id] { scroll-margin-top: 96px; }
 .dim { color: var(--text-faint); font-weight: 400; }
 
 /* Hide editorial-only spans without removing markup */
-.eyebrow__sq, .section-no, .hero__rail, .hero__index, .ticker,
+.eyebrow__sq,
 .masthead__strap .dot, .masthead__strap span:not(.live):not(.live-dot),
-.pillar__num, .feature-card__no, .stage__no, .voice__mark,
+.pillar__num, .feature-card__no, .stage__no,
 .case-tag__no, .case-subhead__no,
 .contact__eyebrow .eyebrow__sq--light {
   display: none !important;
@@ -458,10 +460,12 @@ section[id], main[id] { scroll-margin-top: 96px; }
   .hero::before { animation: none; }
 }
 .hero__grid {
-  display: block;
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: 56px;
+  align-items: stretch;
 }
-.hero__side { display: none; }
-.hero__main { max-width: 980px; }
+.hero__main { max-width: 880px; }
 
 .eyebrow--hero {
   margin-bottom: 28px;
@@ -518,14 +522,9 @@ section[id], main[id] { scroll-margin-top: 96px; }
 }
 .hero__meta-v .dim { color: var(--text-muted); font-weight: 400; font-size: 14px; }
 
-.hero__rail { display: none; }
-
 @media (max-width: 760px) {
   .hero__meta { grid-template-columns: 1fr; gap: 20px; }
 }
-
-/* ─── TICKER (hidden in modern direction) ─────────────────────────── */
-.ticker, .ticker__track { display: none; }
 
 /* ─── PILLARS — three-up grid ─────────────────────────────────────── */
 .pillars { background: var(--bg); }
@@ -1254,8 +1253,85 @@ section[id], main[id] { scroll-margin-top: 96px; }
   line-height: 1.55;
   max-width: 560px;
 }
+/* Mobile timeline — a deliberate vertical-rail redesign, not a stack.
+   Dots connect along a thin spine; year becomes a small accent eyebrow;
+   role takes prominence. */
 @media (max-width: 800px) {
-  .rail__item { grid-template-columns: 1fr; gap: 8px; padding: 28px 0; }
+  .rail {
+    position: relative;
+    padding-left: 32px;
+    padding-right: var(--gutter);
+  }
+  .rail::before {
+    content: "";
+    position: absolute;
+    left: calc(var(--gutter) + 6px);
+    top: 32px;
+    bottom: 32px;
+    width: 1px;
+    background: linear-gradient(180deg,
+      var(--border-strong) 0%,
+      var(--border-strong) 80%,
+      transparent 100%);
+  }
+  .rail__item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 22px 0 26px;
+    position: relative;
+    border-top: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .rail__item:first-child { padding-top: 8px; }
+  .rail__item:last-child { border-bottom: 0; }
+  .rail__item::before {
+    content: "";
+    position: absolute;
+    left: calc(var(--gutter) - var(--gutter) - 26px); /* aligns with the spine */
+    top: 30px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--bg-alt);
+    border: 1.5px solid var(--accent);
+    z-index: 2;
+  }
+  .rail__item--anchor::before {
+    background: var(--accent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+  }
+  .rail__year {
+    font-family: var(--display);
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+  .rail__year-end {
+    font-size: 11.5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .rail__item--anchor .rail__year { color: var(--text); }
+  .rail__item--anchor .rail__year-end { color: var(--text-muted); }
+  .rail__role h3 {
+    font-size: 17px;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+  .rail__org {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .rail__note {
+    font-size: 14.5px;
+    line-height: 1.5;
+  }
 }
 
 /* ─── VOICES (TESTIMONIALS) ────────────────────────────────────────── */
@@ -2095,11 +2171,11 @@ body.nav-open { overflow: hidden; }
   .mobile-cta__btn--primary:active { background: var(--accent-hover); }
 }
 
-/* ─── Scroll-in reveal ────────────────────────────────────────────── */
+/* ─── Scroll-in reveal — restrained. Settle, don't pop. ───────────── */
 .in-view {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  transform: translateY(6px);
+  transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
 }
 .in-view.is-visible { opacity: 1; transform: translateY(0); }
 
@@ -2502,4 +2578,453 @@ body.nav-open { overflow: hidden; }
 @media (max-width: 800px) {
   .case-foot__inner { grid-template-columns: 1fr; gap: 32px; }
   .case-cta { padding-left: 0; border-left: 0; padding-top: 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   EDITORIAL REFINEMENT LAYER
+   Restores the §-numbered editorial spine, hero side rail, ticker,
+   and pull-quote mark. Fixes recent case-grid regression. Adds a
+   subtle scroll-progress indicator at the masthead.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ─── 1. Scroll progress indicator — top hairline ──────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  z-index: 60;
+  background: rgba(15, 23, 42, 0.04);
+  pointer-events: none;
+}
+.scroll-progress__bar {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg,
+    var(--accent) 0%,
+    var(--accent-mid) 60%,
+    #60A5FA 100%);
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: left center;
+  transition: transform 0.08s linear;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.35);
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress__bar { transition: none; }
+}
+
+/* ─── 2. Section-no folio chip — the editorial spine ───────────────── */
+.section-head__top {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.section-no {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--display);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  padding: 5px 11px 4px;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+.section-head--invert .section-no {
+  color: var(--accent-mid);
+  border-color: color-mix(in srgb, var(--accent-mid) 40%, transparent);
+  background: color-mix(in srgb, var(--accent-mid) 8%, transparent);
+}
+/* Trailing hairline rule that runs from the section name into negative space —
+   gives the section-head__top a magazine-folio feel. */
+.section-head__top {
+  position: relative;
+}
+.section-head__top::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  max-width: 96px;
+  background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+  align-self: center;
+  margin-left: 4px;
+}
+.section-head--invert .section-head__top::after {
+  background: linear-gradient(90deg, var(--border-dark-strong) 0%, transparent 100%);
+}
+
+/* ─── 3. Hero side rail — magazine-style folio mark ────────────────── */
+.hero__side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  min-height: 360px;
+  padding-top: 6px;
+  position: relative;
+}
+/* Vertical hairline running the height of the rail */
+.hero__side::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  right: -28px;
+  width: 1px;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    var(--border) 12%,
+    var(--border) 88%,
+    transparent 100%);
+}
+.hero__index {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.hero__index .section-name {
+  font-size: 11px;
+  letter-spacing: 0.10em;
+}
+.hero__est {
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero__est-num {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  line-height: 0.95;
+}
+.hero__est-num::before {
+  content: "—";
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 4px;
+  letter-spacing: 0;
+}
+.hero__est-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ─── 4. Hero bottom rail — pillar tagline ─────────────────────────── */
+.hero__rail {
+  display: block;
+  margin-top: 56px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+.hero__rail::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 64px;
+  height: 1px;
+  background: var(--accent);
+}
+.hero__rail-text {
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Mobile — collapse the side rail; show as a small inline marker above hero copy */
+@media (max-width: 860px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .hero__side {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero__side::after { display: none; }
+  .hero__est {
+    padding-top: 0;
+    border-top: 0;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    width: auto;
+  }
+  .hero__est-num { font-size: 20px; }
+  .hero__est-num::before { display: none; }
+  .hero__est-label { font-size: 11px; }
+  .hero__rail { margin-top: 40px; }
+}
+
+/* ─── 5. Sector ticker — refined marquee ───────────────────────────── */
+.ticker {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 22px 0;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+/* Edge fade gradients so type doesn't hard-clip at viewport edges */
+.ticker::before,
+.ticker::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.ticker::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg-alt) 20%, transparent 100%);
+}
+.ticker::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--bg-alt) 20%, transparent 100%);
+}
+.ticker__track {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+  animation: ticker-scroll 58s linear infinite;
+  will-change: transform;
+}
+.ticker__track span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 26px;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--text-muted);
+}
+.ticker__track i {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+@keyframes ticker-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track { animation: none; transform: translate3d(0, 0, 0); }
+  .ticker__track > *:nth-child(n+8) { display: none; }
+  .ticker::before, .ticker::after { display: none; }
+}
+
+/* ─── 6. Voice mark — giant editorial quote ────────────────────────── */
+.voice__mark {
+  display: block !important;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 0.6;
+  color: var(--accent-mid);
+  opacity: 0.55;
+  margin-bottom: 12px;
+  letter-spacing: -0.05em;
+  user-select: none;
+}
+
+/* ─── 7. Case-grid fix — Met Police status chip + tonal balance ────── */
+/* The "Current" card has no detail page — close it with a live-status chip
+   instead of leaving an empty terminal where the other cards have a CTA. */
+.case--current { position: relative; }
+.case__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 28px 28px;
+  padding: 7px 12px 6px;
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  align-self: flex-start;
+  line-height: 1;
+}
+.case__status-dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.case__status-dot::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  opacity: 0;
+  animation: status-pulse 2.4s var(--ease-out) infinite;
+}
+@keyframes status-pulse {
+  0%   { transform: scale(0.6); opacity: 0.7; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .case__status-dot::before { animation: none; opacity: 0; }
+}
+
+/* Refine the logo thumbnail — give it tonal parity with the editorial photos:
+   subtle navy radial that echoes the dark gradient on the other thumbs,
+   and a thin accent baseline that ties it to the other cards. */
+.case__thumb--logo {
+  background:
+    radial-gradient(ellipse 100% 100% at 50% 35%,
+      color-mix(in srgb, var(--accent) 7%, var(--bg)) 0%,
+      var(--bg-alt) 70%);
+  padding: 32px;
+  position: relative;
+}
+.case__thumb--logo::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--accent) 50%,
+    transparent 100%);
+  opacity: 0.6;
+}
+
+/* ─── 8. Publications subsection — tighter parity with timeline ────── */
+.timeline__publications .section-head {
+  padding-top: 72px;
+  padding-bottom: 32px;
+  position: relative;
+}
+.timeline__publications .section-head::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: var(--gutter);
+  right: var(--gutter);
+  height: 1px;
+  background: var(--border);
+}
+.timeline__publications .display--md {
+  letter-spacing: -0.02em;
+}
+
+/* ─── 9. Section-head spacing refinement ───────────────────────────── */
+/* The §-chip + name + trailing rule wants a touch more breathing room
+   between top-row and the display heading below. */
+.section-head__top {
+  margin-bottom: 28px;
+}
+
+/* ─── 10. Subtle masthead refinement — sharper "scrolled" state ────── */
+.masthead.is-scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 1px 0 var(--border), 0 8px 24px -16px rgba(15, 23, 42, 0.08);
+  border-bottom-color: transparent;
+}
+
+/* ─── 11. Mobile — make sure section-no doesn't crowd at small sizes ── */
+@media (max-width: 600px) {
+  .section-head__top {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .section-no {
+    font-size: 10px;
+    padding: 4px 9px 3px;
+  }
+  .section-head__top::after { display: none; }
+}
+
+/* ─── 12. Mobile bottom-CTA — give scroll progress room to breathe ─── */
+@media (max-width: 760px) {
+  .scroll-progress { top: 0; }
+}
+
+/* ─── 13. Featured-tier clients — gives the flat 22-cell wall a primary
+   hierarchy moment. Flagship clients (Ofsted, Met, Lloyds, Birkbeck) sit
+   in a wider, full-color top row; the rest stay in the desaturated grid. */
+.client-logo--featured {
+  grid-column: span 2;
+}
+.client-logo--featured .client-logo__plate {
+  min-height: 160px;
+  padding: 36px 28px;
+  background:
+    linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--accent) 2%, var(--bg)) 100%);
+}
+.client-logo--featured .client-logo__plate img {
+  max-height: 80px;
+  filter: none;
+  opacity: 1;
+}
+.client-logo--featured .client-logo__name {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  padding: 12px 14px;
+}
+.client-logo--featured {
+  border-color: color-mix(in srgb, var(--accent) 22%, var(--border));
+}
+@media (hover: hover) {
+  .client-logo--featured:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .client-logo--featured {
+    transition: border-color var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
+  }
+}
+@media (max-width: 1100px) {
+  .client-logo--featured { grid-column: span 2; }
+}
+@media (max-width: 700px) {
+  .client-logo--featured { grid-column: span 1; }
+  .client-logo--featured .client-logo__plate { min-height: 130px; padding: 28px 20px; }
+  .client-logo--featured .client-logo__plate img { max-height: 64px; }
 }
